@@ -15,7 +15,7 @@ GNU General Public License for more details.
 
 #include <windows.h>
 
-#define GAME_PATH	"valve"	// default dir to start from
+#define GAME_PATH	"Valve"	// default dir to start from
 
 #ifdef WIN32
 // enable NVIDIA High Performance Graphics while using Integrated Graphics.
@@ -68,7 +68,7 @@ void Sys_ChangeGame( const char *progname )
 
 	Sys_UnloadEngine ();
 	Sys_LoadEngine ();
-	
+
 	Host_Main( szGameDir, TRUE, ( Host_Shutdown != NULL ) ? Sys_ChangeGame : NULL );
 }
 
