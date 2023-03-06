@@ -9,4 +9,10 @@ include_directories(
     ${Engine_Root}/gl
     ${Engine_Root}/server
 )
+
+set(Engine_build_config ${Engine_Root}/common/config_fteqw.h CACHE FILEPATH) #build config
+set(Engine_Lib_Defines ${Engine_Lib_Defines}; CONFIG_FILE_NAME=${Engine_build_config})
+set(Engine_USL_SDL False CACHE BOOL) #do not use sdl
+
+
 #need to check fteqw CmakeLists.txt file
